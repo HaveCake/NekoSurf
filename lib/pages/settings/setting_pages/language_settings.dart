@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chan/blocs/locale_manager.dart';
 import 'package:flutter_chan/blocs/theme.dart';
-import 'package:flutter_chan/constants/app_strings.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 /// Settings page for language/locale selection
@@ -20,21 +20,21 @@ class LanguageSettings extends StatelessWidget {
       context: context,
       builder: (BuildContext dialogContext) {
         return CupertinoAlertDialog(
-          title: const Text(AppStrings.changeLanguage),
+          title: Text(AppLocalizations.of(context)!.changeLanguage),
           content: Text(
-            '${AppStrings.changeLanguageMessage}\n\n'
+            '${AppLocalizations.of(context)!.changeLanguageMessage}\n\n'
             '${LocaleManager.getLocaleName(locale)}',
           ),
           actions: <Widget>[
             CupertinoDialogAction(
               isDefaultAction: true,
               onPressed: () => Navigator.of(dialogContext).pop(false),
-              child: const Text(AppStrings.cancel),
+              child: Text(AppLocalizations.of(context)!.cancel),
             ),
             CupertinoDialogAction(
               isDestructiveAction: true,
               onPressed: () => Navigator.of(dialogContext).pop(true),
-              child: const Text(AppStrings.change),
+              child: Text(AppLocalizations.of(context)!.change),
             ),
           ],
         );

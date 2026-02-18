@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chan/Models/board.dart';
 import 'package:flutter_chan/blocs/favorite_model.dart';
-import 'package:flutter_chan/constants/app_strings.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_chan/pages/board/board_page.dart';
 import 'package:flutter_chan/services/string.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -52,7 +52,7 @@ class _BoardTileState extends State<BoardTile> {
               motion: const BehindMotion(),
               children: [
                 SlidableAction(
-                  label: AppStrings.add,
+                  label: AppLocalizations.of(context)!.add,
                   backgroundColor: Colors.green,
                   icon: Icons.add,
                   onPressed: (context) => {

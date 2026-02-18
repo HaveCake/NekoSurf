@@ -1,4 +1,4 @@
-import 'package:flutter_chan/constants/app_strings.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -63,7 +63,7 @@ class _ListPostState extends State<ListPost> {
               motion: const BehindMotion(),
               children: [
                 SlidableAction(
-                  label: AppStrings.remove,
+                  label: AppLocalizations.of(context)!.remove,
                   backgroundColor: Colors.red,
                   icon: Icons.delete,
                   onPressed: (context) => {
@@ -77,7 +77,7 @@ class _ListPostState extends State<ListPost> {
               motion: const BehindMotion(),
               children: [
                 SlidableAction(
-                  label: AppStrings.add,
+                  label: AppLocalizations.of(context)!.add,
                   backgroundColor: Colors.green,
                   icon: Icons.add,
                   onPressed: (context) => {

@@ -6,7 +6,7 @@ import 'package:flutter_chan/Models/post.dart';
 import 'package:flutter_chan/blocs/favorite_model.dart';
 import 'package:flutter_chan/blocs/settings_model.dart';
 import 'package:flutter_chan/blocs/theme.dart';
-import 'package:flutter_chan/constants/app_strings.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_chan/pages/boards/board_tile.dart';
 import 'package:flutter_chan/pages/bookmarks/bookmarks.dart';
 import 'package:flutter_chan/pages/savedAttachments/saved_attachments.dart';
@@ -184,7 +184,7 @@ class BoardListState extends State<BoardList> {
                       return StatefulBuilder(
                         builder: (context, setState) {
                           return CupertinoAlertDialog(
-                            title: const Text(AppStrings.openLink),
+                            title: Text(AppLocalizations.of(context)!.openLink),
                             content: Column(
                               children: [
                                 const SizedBox(

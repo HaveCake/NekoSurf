@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:flutter_chan/Models/saved_attachment.dart';
 import 'package:flutter_chan/blocs/saved_attachments_model.dart';
-import 'package:flutter_chan/constants/app_strings.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_chan/pages/savedAttachments/permission_denied.dart';
 import 'package:image_gallery_saver_plus/image_gallery_saver_plus.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
@@ -129,7 +129,7 @@ Future<void> saveVideo(
               const Duration(milliseconds: 1800),
               true,
               context,
-              AppStrings.fileSaved,
+              AppLocalizations.of(context)!.fileSaved,
             )
           else
             null,
@@ -149,7 +149,7 @@ Future<void> saveVideo(
               const Duration(milliseconds: 1800),
               true,
               context,
-              AppStrings.fileSaved,
+              AppLocalizations.of(context)!.fileSaved,
             )
           else
             null,
@@ -164,7 +164,7 @@ Future<void> saveVideo(
       return;
     }
 
-    showCupertinoSnackbar(null, false, context, AppStrings.downloading);
+    showCupertinoSnackbar(null, false, context, AppLocalizations.of(context)!.downloading);
 
     final String ext = '.${fileName.split('.').last}';
 
@@ -176,7 +176,7 @@ Future<void> saveVideo(
         if (Platform.isIOS) {
           if (ext == '.webm') {
             Navigator.pop(context);
-            showCupertinoSnackbar(null, false, context, AppStrings.fileConverting);
+            showCupertinoSnackbar(null, false, context, AppLocalizations.of(context)!.fileConverting);
 
             final ReturnCode? returnCode = await convertWebMToMP4(
               videoCache,
@@ -195,7 +195,7 @@ Future<void> saveVideo(
                       const Duration(milliseconds: 1800),
                       true,
                       context,
-                      AppStrings.fileDownloaded,
+                      AppLocalizations.of(context)!.fileDownloaded,
                     )
                   else
                     null,
@@ -207,7 +207,7 @@ Future<void> saveVideo(
                 const Duration(milliseconds: 1800),
                 true,
                 context,
-                AppStrings.downloadFailed,
+                AppLocalizations.of(context)!.downloadFailed,
               );
             }
           } else {
@@ -222,7 +222,7 @@ Future<void> saveVideo(
                     const Duration(milliseconds: 1800),
                     true,
                     context,
-                    AppStrings.fileDownloaded,
+                    AppLocalizations.of(context)!.fileDownloaded,
                   )
                 else
                   null,
@@ -238,7 +238,7 @@ Future<void> saveVideo(
                   const Duration(milliseconds: 1800),
                   true,
                   context,
-                  AppStrings.fileDownloaded,
+                  AppLocalizations.of(context)!.fileDownloaded,
                 )
               else
                 null,
@@ -252,7 +252,7 @@ Future<void> saveVideo(
         const Duration(milliseconds: 1800),
         true,
         context,
-        AppStrings.downloadFailed,
+        AppLocalizations.of(context)!.downloadFailed,
       );
     }
   }
@@ -297,7 +297,7 @@ Future<void> shareMedia(
       return;
     }
 
-    showCupertinoSnackbar(null, false, context, AppStrings.downloading);
+    showCupertinoSnackbar(null, false, context, AppLocalizations.of(context)!.downloading);
 
     try {
       if (await directory.exists()) {
@@ -309,7 +309,7 @@ Future<void> shareMedia(
         if (Platform.isIOS) {
           if (ext == '.webm') {
             Navigator.pop(context);
-            showCupertinoSnackbar(null, false, context, AppStrings.fileConverting);
+            showCupertinoSnackbar(null, false, context, AppLocalizations.of(context)!.fileConverting);
 
             final ReturnCode? returnCode = await convertWebMToMP4(
               videoCache,
@@ -322,7 +322,7 @@ Future<void> shareMedia(
                 const Duration(milliseconds: 1000),
                 true,
                 context,
-                AppStrings.fileDownloaded,
+                AppLocalizations.of(context)!.fileDownloaded,
               ).then(
                 (value) => {
                   Share.shareXFiles([
@@ -336,7 +336,7 @@ Future<void> shareMedia(
                 const Duration(milliseconds: 1800),
                 true,
                 context,
-                AppStrings.downloadFailed,
+                AppLocalizations.of(context)!.downloadFailed,
               );
             }
           } else {
@@ -345,7 +345,7 @@ Future<void> shareMedia(
               const Duration(milliseconds: 1000),
               true,
               context,
-              AppStrings.fileDownloaded,
+              AppLocalizations.of(context)!.fileDownloaded,
             ).then(
               (value) => {
                 Share.shareXFiles([XFile(videoCache.path)]),
@@ -387,7 +387,7 @@ Future<SavedAttachment?> saveAttachment(
     return null;
   }
 
-  showCupertinoSnackbar(null, false, context, AppStrings.downloading);
+  showCupertinoSnackbar(null, false, context, AppLocalizations.of(context)!.downloading);
 
   try {
     if (await directory.exists()) {
@@ -409,7 +409,7 @@ Future<SavedAttachment?> saveAttachment(
       if (Platform.isIOS) {
         Navigator.pop(context);
         if (ext == '.webm') {
-          showCupertinoSnackbar(null, false, context, AppStrings.fileConverting);
+          showCupertinoSnackbar(null, false, context, AppLocalizations.of(context)!.fileConverting);
 
           final ReturnCode? returnCode = await convertWebMToMP4(
             videoCache,
@@ -430,7 +430,7 @@ Future<SavedAttachment?> saveAttachment(
               const Duration(milliseconds: 1800),
               true,
               context,
-              AppStrings.fileDownloaded,
+              AppLocalizations.of(context)!.fileDownloaded,
             );
 
             savedAttachmentsProvider.startVideo();
@@ -447,7 +447,7 @@ Future<SavedAttachment?> saveAttachment(
               const Duration(milliseconds: 1800),
               true,
               context,
-              AppStrings.downloadFailed,
+              AppLocalizations.of(context)!.downloadFailed,
             );
 
             return null;
@@ -469,7 +469,7 @@ Future<SavedAttachment?> saveAttachment(
               const Duration(milliseconds: 1800),
               true,
               context,
-              AppStrings.fileDownloaded,
+              AppLocalizations.of(context)!.fileDownloaded,
             );
 
             savedAttachmentsProvider.startVideo();
@@ -484,7 +484,7 @@ Future<SavedAttachment?> saveAttachment(
               const Duration(milliseconds: 1800),
               true,
               context,
-              AppStrings.fileDownloaded,
+              AppLocalizations.of(context)!.fileDownloaded,
             );
 
             savedAttachmentsProvider.startVideo();
@@ -518,7 +518,7 @@ Future<SavedAttachment?> saveAttachment(
           const Duration(milliseconds: 1800),
           true,
           context,
-          AppStrings.fileDownloaded,
+          AppLocalizations.of(context)!.fileDownloaded,
         );
 
         savedAttachmentsProvider.startVideo();

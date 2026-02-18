@@ -32,5 +32,9 @@
   "fileDownloaded": "文件已下载！",
   "downloading": "下载中...",
   "fileConverting": "文件转换中...",
-  "downloadFailed": "下载失败 :("
+  "downloadFailed": "下载失败 :(",
+  "settingsLanguage": "语言",
+  "changeLanguage": "更改语言",
+  "changeLanguageMessage": "应用将更新以显示新语言。",
+  "change": "更改"
 }
