@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chan/API/api.dart';
 import 'package:flutter_chan/blocs/theme.dart';
+import 'package:flutter_chan/constants/app_strings.dart';
 import 'package:flutter_chan/pages/settings/setting_pages/data_settings.dart';
 import 'package:flutter_chan/pages/settings/setting_pages/privacy_settings.dart';
 import 'package:flutter_chan/pages/settings/setting_pages/threads_settings.dart';
@@ -80,7 +81,7 @@ class _SettingsState extends State<Settings> {
                   title: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('NekoSurf'),
+                      const Text(AppStrings.appName),
                       FutureBuilder<PackageInfo>(
                           future: _getVersionNumber,
                           builder:
@@ -105,7 +106,7 @@ class _SettingsState extends State<Settings> {
                     icon: CupertinoIcons.list_bullet,
                     color: CupertinoColors.systemPurple,
                   ),
-                  title: const Text('Threads'),
+                  title: const Text(AppStrings.settingsThreads),
                   onTap: () => {
                     Navigator.of(context).push(
                       MaterialPageRoute(
@@ -120,7 +121,7 @@ class _SettingsState extends State<Settings> {
                     icon: CupertinoIcons.hand_raised_fill,
                     color: CupertinoColors.activeGreen,
                   ),
-                  title: const Text('Privacy'),
+                  title: const Text(AppStrings.settingsPrivacy),
                   onTap: () => {
                     Navigator.of(context).push(
                       MaterialPageRoute(
@@ -135,7 +136,7 @@ class _SettingsState extends State<Settings> {
                     icon: CupertinoIcons.doc,
                     color: CupertinoColors.systemYellow,
                   ),
-                  title: const Text('Data'),
+                  title: const Text(AppStrings.settingsData),
                   onTap: () => {
                     Navigator.of(context).push(
                       MaterialPageRoute(

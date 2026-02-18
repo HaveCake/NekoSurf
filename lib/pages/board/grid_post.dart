@@ -61,7 +61,7 @@ class _GridPostState extends State<GridPost> {
             actions: [
               if (isFavorite)
                 CupertinoActionSheetAction(
-                  child: const Text('Remove bookmark'),
+                  child: const Text(AppStrings.removeBookmark),
                   onPressed: () {
                     bookmarks.removeBookmarks(favorite);
 
@@ -70,7 +70,7 @@ class _GridPostState extends State<GridPost> {
                 )
               else
                 CupertinoActionSheetAction(
-                  child: const Text('Set bookmark'),
+                  child: const Text(AppStrings.setBookmark),
                   onPressed: () {
                     bookmarks.addBookmarks(favorite);
 

@@ -51,7 +51,7 @@ class _BoardTileState extends State<BoardTile> {
               motion: const BehindMotion(),
               children: [
                 SlidableAction(
-                  label: 'Add',
+                  label: AppStrings.add,
                   backgroundColor: Colors.green,
                   icon: Icons.add,
                   onPressed: (context) => {

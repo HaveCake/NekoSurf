@@ -1,3 +1,4 @@
+import 'package:flutter_chan/constants/app_strings.dart';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -62,7 +63,7 @@ class _ListPostState extends State<ListPost> {
               motion: const BehindMotion(),
               children: [
                 SlidableAction(
-                  label: 'Remove',
+                  label: AppStrings.remove,
                   backgroundColor: Colors.red,
                   icon: Icons.delete,
                   onPressed: (context) => {
@@ -76,7 +77,7 @@ class _ListPostState extends State<ListPost> {
               motion: const BehindMotion(),
               children: [
                 SlidableAction(
-                  label: 'Add',
+                  label: AppStrings.add,
                   backgroundColor: Colors.green,
                   icon: Icons.add,
                   onPressed: (context) => {

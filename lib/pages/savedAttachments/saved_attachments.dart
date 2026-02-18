@@ -157,7 +157,7 @@ class _SavedAttachmentsState extends State<SavedAttachments> {
                               CupertinoActionSheet(
                             actions: [
                               CupertinoActionSheetAction(
-                                child: const Text('Clear bookmarks'),
+                                child: const Text(AppStrings.clearBookmarks),
                                 onPressed: () {
                                   savedAttachments
                                       .clearSavedAttachments(context);

@@ -231,7 +231,7 @@ class BoardPageState extends State<BoardPage> {
                                 ),
                               ],
                               cancelButton: CupertinoActionSheetAction(
-                                child: const Text('Cancel'),
+                                child: const Text(AppStrings.cancel),
                                 onPressed: () {
                                   Navigator.pop(context);
                                 },

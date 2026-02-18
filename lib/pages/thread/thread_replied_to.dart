@@ -96,7 +96,7 @@ class _ThreadRepliesToState extends State<ThreadRepliesTo> {
           data: MediaQueryData(
             textScaleFactor: MediaQuery.textScaleFactorOf(context),
           ),
-          child: const Text('Replies'),
+          child: const Text(AppStrings.replies),
         ),
       ),
       body: FutureBuilder(

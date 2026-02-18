@@ -1,3 +1,4 @@
+import 'package:flutter_chan/constants/app_strings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chan/API/api.dart';
@@ -157,7 +158,7 @@ class ThreadPageState extends State<ThreadPage> {
                     builder: (BuildContext context) => CupertinoActionSheet(
                       actions: [
                         CupertinoActionSheetAction(
-                          child: const Text('Share'),
+                          child: const Text(AppStrings.share),
                           onPressed: () {
                             Share.share(
                                 'https://boards.4chan.org/${widget.board}/thread/${widget.thread}');
@@ -176,7 +177,7 @@ class ThreadPageState extends State<ThreadPage> {
                         ),
                       ],
                       cancelButton: CupertinoActionSheetAction(
-                        child: const Text('Cancel'),
+                        child: const Text(AppStrings.cancel),
                         onPressed: () {
                           Navigator.pop(context);
                         },

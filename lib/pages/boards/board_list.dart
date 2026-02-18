@@ -183,7 +183,7 @@ class BoardListState extends State<BoardList> {
                       return StatefulBuilder(
                         builder: (context, setState) {
                           return CupertinoAlertDialog(
-                            title: const Text('Open Link'),
+                            title: const Text(AppStrings.openLink),
                             content: Column(
                               children: [
                                 const SizedBox(
