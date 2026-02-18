@@ -107,5 +107,5 @@ jobs:
           gh release upload ${{github.event.release.tag_name}} build/app/outputs/apk/release/app-armeabi-v7a-release.apk
           gh release upload ${{github.event.release.tag_name}} build/app/outputs/apk/release/app-x86_64-release.apk
         env:
-          GITHUB_TOKEN: ${{ github.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
