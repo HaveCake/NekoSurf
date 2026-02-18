@@ -12,6 +12,7 @@ import 'package:flutter_chan/blocs/watched_media_model.dart';
 import 'package:flutter_chan/pages/boards/board_list.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -113,7 +114,7 @@ class _AppWithThemeState extends State<AppWithTheme>
       locale: localeManager.locale,
       supportedLocales: LocaleManager.supportedLocales,
       localizationsDelegates: const [
-        // AppLocalizations.delegate, // TODO: Uncomment after running flutter gen-l10n
+        AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,

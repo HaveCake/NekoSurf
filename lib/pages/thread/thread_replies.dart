@@ -1,4 +1,4 @@
-import 'package:flutter_chan/constants/app_strings.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chan/Models/post.dart';
@@ -105,7 +105,7 @@ class _ThreadRepliesState extends State<ThreadReplies> {
                   data: MediaQueryData(
                     textScaleFactor: MediaQuery.textScaleFactorOf(context),
                   ),
-                  child: const Text(AppStrings.replies),
+                  child: Text(AppLocalizations.of(context)!.replies),
                 ),
               ),
               body: Scrollbar(

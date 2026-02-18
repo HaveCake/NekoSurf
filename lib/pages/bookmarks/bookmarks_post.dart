@@ -6,7 +6,7 @@ import 'package:flutter_chan/Models/bookmark_status.dart';
 import 'package:flutter_chan/Models/post.dart';
 import 'package:flutter_chan/blocs/bookmarks_model.dart';
 import 'package:flutter_chan/blocs/theme.dart';
-import 'package:flutter_chan/constants/app_strings.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_chan/enums/enums.dart';
 import 'package:flutter_chan/pages/replies_row.dart';
 import 'package:flutter_chan/pages/thread/thread_page.dart';
@@ -61,7 +61,7 @@ class _BookmarksPostState extends State<BookmarksPost> {
                   motion: const BehindMotion(),
                   children: [
                     SlidableAction(
-                      label: AppStrings.delete,
+                      label: AppLocalizations.of(context)!.delete,
                       backgroundColor: Colors.red,
                       icon: Icons.delete,
                       onPressed: (context) => {

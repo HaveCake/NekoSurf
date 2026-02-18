@@ -131,5 +131,21 @@
   "downloadFailed": "Download failed :(",
   "@downloadFailed": {
     "description": "Message when download fails"
+  },
+  "settingsLanguage": "Language",
+  "@settingsLanguage": {
+    "description": "Settings menu item for language"
+  },
+  "changeLanguage": "Change Language",
+  "@changeLanguage": {
+    "description": "Language change dialog title"
+  },
+  "changeLanguageMessage": "The app will update to show the new language.",
+  "@changeLanguageMessage": {
+    "description": "Language change confirmation message"
+  },
+  "change": "Change",
+  "@change": {
+    "description": "Change button label"
   }
 }

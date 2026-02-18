@@ -6,7 +6,7 @@ import 'package:flutter_chan/Models/bookmark.dart';
 import 'package:flutter_chan/Models/post.dart';
 import 'package:flutter_chan/blocs/bookmarks_model.dart';
 import 'package:flutter_chan/blocs/theme.dart';
-import 'package:flutter_chan/constants/app_strings.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_chan/pages/replies_row.dart';
 import 'package:flutter_chan/pages/thread/thread_page.dart';
 import 'package:flutter_chan/widgets/image_viewer.dart';
@@ -62,7 +62,7 @@ class _GridPostState extends State<GridPost> {
             actions: [
               if (isFavorite)
                 CupertinoActionSheetAction(
-                  child: const Text(AppStrings.removeBookmark),
+                  child: Text(AppLocalizations.of(context)!.removeBookmark),
                   onPressed: () {
                     bookmarks.removeBookmarks(favorite);
 
@@ -71,7 +71,7 @@ class _GridPostState extends State<GridPost> {
                 )
               else
                 CupertinoActionSheetAction(
-                  child: const Text(AppStrings.setBookmark),
+                  child: Text(AppLocalizations.of(context)!.setBookmark),
                   onPressed: () {
                     bookmarks.addBookmarks(favorite);
 

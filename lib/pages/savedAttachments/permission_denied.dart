@@ -2,7 +2,7 @@ import 'package:app_settings/app_settings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chan/blocs/theme.dart';
-import 'package:flutter_chan/constants/app_strings.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class PermissionDenied extends StatelessWidget {
@@ -22,7 +22,7 @@ class PermissionDenied extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              AppStrings.permissionDeniedTitle,
+              AppLocalizations.of(context)!.permissionDeniedTitle,
               style: TextStyle(
                 fontSize: 26,
                 color: theme.getTheme() == ThemeData.dark()
@@ -34,7 +34,7 @@ class PermissionDenied extends StatelessWidget {
               height: 30,
             ),
             Text(
-              AppStrings.permissionDeniedMessage,
+              AppLocalizations.of(context)!.permissionDeniedMessage,
               style: TextStyle(
                 fontSize: 16,
                 color: theme.getTheme() == ThemeData.dark()
@@ -46,7 +46,7 @@ class PermissionDenied extends StatelessWidget {
               height: 10,
             ),
             Text(
-              AppStrings.permissionDeniedInstruction,
+              AppLocalizations.of(context)!.permissionDeniedInstruction,
               style: TextStyle(
                 fontSize: 16,
                 color: theme.getTheme() == ThemeData.dark()
@@ -62,7 +62,7 @@ class PermissionDenied extends StatelessWidget {
                   ? Colors.white
                   : Colors.black,
               child: Text(
-                AppStrings.openSystemSettings,
+                AppLocalizations.of(context)!.openSystemSettings,
                 style: TextStyle(
                   color: theme.getTheme() == ThemeData.dark()
                       ? Colors.black

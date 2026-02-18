@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chan/blocs/theme.dart';
 import 'package:flutter_chan/blocs/watched_media_model.dart';
-import 'package:flutter_chan/constants/app_strings.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -195,7 +195,7 @@ class DataSettingsState extends State<DataSettings> {
           CupertinoListSection.insetGrouped(
             children: [
               CupertinoListTile(
-                title: const Text(AppStrings.cacheSize),
+                title: Text(AppLocalizations.of(context)!.cacheSize),
                 trailing: Text(
                   '${_cacheSize.toStringAsFixed(2)} MB',
                   style: const TextStyle(
@@ -212,7 +212,7 @@ class DataSettingsState extends State<DataSettings> {
                 color: CupertinoColors.systemRed,
                 icon: CupertinoIcons.trash,
               ),
-              title: const Text(AppStrings.deleteCache),
+              title: Text(AppLocalizations.of(context)!.deleteCache),
               trailing: const CupertinoListTileChevron(),
               onTap: () => deleteCache(),
             )
@@ -220,7 +220,7 @@ class DataSettingsState extends State<DataSettings> {
           CupertinoListSection.insetGrouped(
             children: [
               CupertinoListTile(
-                title: const Text(AppStrings.watchedMediaRetentionPeriod),
+                title: Text(AppLocalizations.of(context)!.watchedMediaRetentionPeriod),
                 subtitle: const Text(
                   'The number of days watched status of all media will be kept.',
                 ),
@@ -235,7 +235,7 @@ class DataSettingsState extends State<DataSettings> {
                       context: context,
                       builder: (context) {
                         return CupertinoActionSheet(
-                          title: const Text(AppStrings.selectRetentionPeriod),
+                          title: Text(AppLocalizations.of(context)!.selectRetentionPeriod),
                           actions: [
                             for (final days in [3, 7, 14, 30])
                               CupertinoActionSheetAction(
@@ -247,7 +247,7 @@ class DataSettingsState extends State<DataSettings> {
                           ],
                           cancelButton: CupertinoActionSheetAction(
                             onPressed: () => Navigator.pop(context),
-                            child: const Text(AppStrings.cancel),
+                            child: Text(AppLocalizations.of(context)!.cancel),
                           ),
                         );
                       },
@@ -265,7 +265,7 @@ class DataSettingsState extends State<DataSettings> {
                   color: CupertinoColors.systemRed,
                   icon: CupertinoIcons.eye_slash,
                 ),
-                title: const Text(AppStrings.clearWatchedMediaHistory),
+                title: Text(AppLocalizations.of(context)!.clearWatchedMediaHistory),
                 trailing: const CupertinoListTileChevron(),
                 onTap: () async {
                   final watchedMediaProvider =
