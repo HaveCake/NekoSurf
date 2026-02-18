@@ -8,6 +8,52 @@ import 'package:provider/provider.dart';
 class LanguageSettings extends StatelessWidget {
   const LanguageSettings({Key? key}) : super(key: key);
 
+  Future<void> _changeLanguage(BuildContext context, Locale locale) async {
+    final localeManager = Provider.of<LocaleManager>(context, listen: false);
+    
+    // Don't do anything if same language
+    if (localeManager.locale == locale) return;
+
+    // Show confirmation dialog
+    final bool? confirmed = await showCupertinoDialog<bool>(
+      context: context,
+      builder: (BuildContext dialogContext) {
+        return CupertinoAlertDialog(
+          title: const Text('Change Language'),
+          content: Text(
+            'Change app language to ${LocaleManager.getLocaleName(locale)}?\n\n'
+            'The app will restart to apply the changes.',
+          ),
+          actions: <Widget>[
+            CupertinoDialogAction(
+              isDefaultAction: true,
+              onPressed: () => Navigator.of(dialogContext).pop(false),
+              child: const Text('Cancel'),
+            ),
+            CupertinoDialogAction(
+              isDestructiveAction: true,
+              onPressed: () => Navigator.of(dialogContext).pop(true),
+              child: const Text('Change'),
+            ),
+          ],
+        );
+      },
+    );
+
+    if (confirmed == true) {
+      // Change the locale
+      await localeManager.setLocale(locale);
+      
+      // Pop back to settings
+      if (context.mounted) {
+        Navigator.of(context).pop();
+        
+        // Show a snackbar or message that language has been changed
+        // The app will automatically rebuild with the new locale
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Provider.of<ThemeChanger>(context);
@@ -39,9 +85,7 @@ class LanguageSettings extends StatelessWidget {
                           color: CupertinoColors.activeBlue,
                         )
                       : null,
-                  onTap: () {
-                    localeManager.setLocale(locale);
-                  },
+                  onTap: () => _changeLanguage(context, locale),
                 );
               }).toList(),
             ),
