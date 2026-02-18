@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chan/blocs/locale_manager.dart';
 import 'package:flutter_chan/blocs/theme.dart';
+import 'package:flutter_chan/constants/app_strings.dart';
 import 'package:provider/provider.dart';
 
 /// Settings page for language/locale selection
@@ -19,21 +20,21 @@ class LanguageSettings extends StatelessWidget {
       context: context,
       builder: (BuildContext dialogContext) {
         return CupertinoAlertDialog(
-          title: const Text('Change Language'),
+          title: const Text(AppStrings.changeLanguage),
           content: Text(
-            'Change app language to ${LocaleManager.getLocaleName(locale)}?\n\n'
-            'The app will restart to apply the changes.',
+            '${AppStrings.changeLanguageMessage}\n\n'
+            '${LocaleManager.getLocaleName(locale)}',
           ),
           actions: <Widget>[
             CupertinoDialogAction(
               isDefaultAction: true,
               onPressed: () => Navigator.of(dialogContext).pop(false),
-              child: const Text('Cancel'),
+              child: const Text(AppStrings.cancel),
             ),
             CupertinoDialogAction(
               isDestructiveAction: true,
               onPressed: () => Navigator.of(dialogContext).pop(true),
-              child: const Text('Change'),
+              child: const Text(AppStrings.change),
             ),
           ],
         );
@@ -48,8 +49,7 @@ class LanguageSettings extends StatelessWidget {
       if (context.mounted) {
         Navigator.of(context).pop();
         
-        // Show a snackbar or message that language has been changed
-        // The app will automatically rebuild with the new locale
+        // The app will automatically rebuild with the new locale via Provider
       }
     }
   }

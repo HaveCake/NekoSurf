@@ -16,6 +16,12 @@ class AppStrings {
   static const String settingsThreads = "Threads";
   static const String settingsPrivacy = "Privacy";
   static const String settingsData = "Data";
+  static const String settingsLanguage = "Language";
+
+  // Language settings
+  static const String changeLanguage = "Change Language";
+  static const String changeLanguageMessage = "The app will update to show the new language.";
+  static const String change = "Change";
 
   // Data settings
   static const String cacheSize = "Cache Size";

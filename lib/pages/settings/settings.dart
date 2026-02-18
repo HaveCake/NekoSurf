@@ -122,7 +122,7 @@ class _SettingsState extends State<Settings> {
                     icon: CupertinoIcons.globe,
                     color: CupertinoColors.systemBlue,
                   ),
-                  title: const Text('Language'),
+                  title: const Text(AppStrings.settingsLanguage),
                   onTap: () => {
                     Navigator.of(context).push(
                       MaterialPageRoute(
