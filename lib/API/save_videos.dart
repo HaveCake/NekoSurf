@@ -129,7 +129,7 @@ Future<void> saveVideo(
               const Duration(milliseconds: 1800),
               true,
               context,
-              'File saved!',
+              AppStrings.fileSaved,
             )
           else
             null,
@@ -149,7 +149,7 @@ Future<void> saveVideo(
               const Duration(milliseconds: 1800),
               true,
               context,
-              'File saved!',
+              AppStrings.fileSaved,
             )
           else
             null,
@@ -164,7 +164,7 @@ Future<void> saveVideo(
       return;
     }
 
-    showCupertinoSnackbar(null, false, context, 'Downloading...');
+    showCupertinoSnackbar(null, false, context, AppStrings.downloading);
 
     final String ext = '.${fileName.split('.').last}';
 
@@ -195,7 +195,7 @@ Future<void> saveVideo(
                       const Duration(milliseconds: 1800),
                       true,
                       context,
-                      'File downloaded!',
+                      AppStrings.fileDownloaded,
                     )
                   else
                     null,
@@ -207,7 +207,7 @@ Future<void> saveVideo(
                 const Duration(milliseconds: 1800),
                 true,
                 context,
-                'Download failed :(',
+                AppStrings.downloadFailed,
               );
             }
           } else {
@@ -222,7 +222,7 @@ Future<void> saveVideo(
                     const Duration(milliseconds: 1800),
                     true,
                     context,
-                    'File downloaded!',
+                    AppStrings.fileDownloaded,
                   )
                 else
                   null,
@@ -238,7 +238,7 @@ Future<void> saveVideo(
                   const Duration(milliseconds: 1800),
                   true,
                   context,
-                  'File downloaded!',
+                  AppStrings.fileDownloaded,
                 )
               else
                 null,
@@ -252,7 +252,7 @@ Future<void> saveVideo(
         const Duration(milliseconds: 1800),
         true,
         context,
-        'Download failed :(',
+        AppStrings.downloadFailed,
       );
     }
   }
@@ -297,7 +297,7 @@ Future<void> shareMedia(
       return;
     }
 
-    showCupertinoSnackbar(null, false, context, 'Downloading...');
+    showCupertinoSnackbar(null, false, context, AppStrings.downloading);
 
     try {
       if (await directory.exists()) {
@@ -322,7 +322,7 @@ Future<void> shareMedia(
                 const Duration(milliseconds: 1000),
                 true,
                 context,
-                'File downloaded!',
+                AppStrings.fileDownloaded,
               ).then(
                 (value) => {
                   Share.shareXFiles([
@@ -336,7 +336,7 @@ Future<void> shareMedia(
                 const Duration(milliseconds: 1800),
                 true,
                 context,
-                'Download failed :(',
+                AppStrings.downloadFailed,
               );
             }
           } else {
@@ -345,7 +345,7 @@ Future<void> shareMedia(
               const Duration(milliseconds: 1000),
               true,
               context,
-              'File downloaded!',
+              AppStrings.fileDownloaded,
             ).then(
               (value) => {
                 Share.shareXFiles([XFile(videoCache.path)]),
@@ -387,7 +387,7 @@ Future<SavedAttachment?> saveAttachment(
     return null;
   }
 
-  showCupertinoSnackbar(null, false, context, 'Downloading...');
+  showCupertinoSnackbar(null, false, context, AppStrings.downloading);
 
   try {
     if (await directory.exists()) {
@@ -430,7 +430,7 @@ Future<SavedAttachment?> saveAttachment(
               const Duration(milliseconds: 1800),
               true,
               context,
-              'File downloaded!',
+              AppStrings.fileDownloaded,
             );
 
             savedAttachmentsProvider.startVideo();
@@ -447,7 +447,7 @@ Future<SavedAttachment?> saveAttachment(
               const Duration(milliseconds: 1800),
               true,
               context,
-              'Download failed :(',
+              AppStrings.downloadFailed,
             );
 
             return null;
@@ -469,7 +469,7 @@ Future<SavedAttachment?> saveAttachment(
               const Duration(milliseconds: 1800),
               true,
               context,
-              'File downloaded!',
+              AppStrings.fileDownloaded,
             );
 
             savedAttachmentsProvider.startVideo();
@@ -484,7 +484,7 @@ Future<SavedAttachment?> saveAttachment(
               const Duration(milliseconds: 1800),
               true,
               context,
-              'File downloaded!',
+              AppStrings.fileDownloaded,
             );
 
             savedAttachmentsProvider.startVideo();
@@ -518,7 +518,7 @@ Future<SavedAttachment?> saveAttachment(
           const Duration(milliseconds: 1800),
           true,
           context,
-          'File downloaded!',
+          AppStrings.fileDownloaded,
         );
 
         savedAttachmentsProvider.startVideo();
