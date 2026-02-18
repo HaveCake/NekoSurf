@@ -4,12 +4,14 @@ import 'package:flutter/services.dart';
 import 'package:flutter_chan/blocs/bookmarks_model.dart';
 import 'package:flutter_chan/blocs/favorite_model.dart';
 import 'package:flutter_chan/blocs/gallery_model.dart';
+import 'package:flutter_chan/blocs/locale_manager.dart';
 import 'package:flutter_chan/blocs/saved_attachments_model.dart';
 import 'package:flutter_chan/blocs/settings_model.dart';
 import 'package:flutter_chan/blocs/theme.dart';
 import 'package:flutter_chan/blocs/watched_media_model.dart';
 import 'package:flutter_chan/pages/boards/board_list.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,6 +33,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider<ThemeChanger>(
           create: (_) => ThemeChanger(ThemeData.dark()),
+        ),
+        ChangeNotifierProvider<LocaleManager>(
+          create: (_) => LocaleManager(),
         ),
         ChangeNotifierProvider<BookmarksProvider>(
           create: (_) => BookmarksProvider([]),
@@ -95,6 +100,7 @@ class _AppWithThemeState extends State<AppWithTheme>
   @override
   Widget build(BuildContext context) {
     final theme = Provider.of<ThemeChanger>(context);
+    final localeManager = Provider.of<LocaleManager>(context);
 
     return CupertinoApp(
       debugShowCheckedModeBanner: false,
@@ -104,10 +110,13 @@ class _AppWithThemeState extends State<AppWithTheme>
             ? Brightness.dark
             : Brightness.light,
       ),
+      locale: localeManager.locale,
+      supportedLocales: LocaleManager.supportedLocales,
       localizationsDelegates: const [
-        DefaultCupertinoLocalizations.delegate,
-        DefaultMaterialLocalizations.delegate,
-        DefaultWidgetsLocalizations.delegate,
+        // AppLocalizations.delegate, // TODO: Uncomment after running flutter gen-l10n
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
       ],
     );
   }

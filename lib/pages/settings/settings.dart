@@ -4,6 +4,7 @@ import 'package:flutter_chan/API/api.dart';
 import 'package:flutter_chan/blocs/theme.dart';
 import 'package:flutter_chan/constants/app_strings.dart';
 import 'package:flutter_chan/pages/settings/setting_pages/data_settings.dart';
+import 'package:flutter_chan/pages/settings/setting_pages/language_settings.dart';
 import 'package:flutter_chan/pages/settings/setting_pages/privacy_settings.dart';
 import 'package:flutter_chan/pages/settings/setting_pages/threads_settings.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -111,6 +112,21 @@ class _SettingsState extends State<Settings> {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) => const ThreadsSettings(),
+                      ),
+                    ),
+                  },
+                  trailing: const CupertinoListTileChevron(),
+                ),
+                CupertinoListTile(
+                  leading: const CupertinoSettingsIcon(
+                    icon: CupertinoIcons.globe,
+                    color: CupertinoColors.systemBlue,
+                  ),
+                  title: const Text('Language'),
+                  onTap: () => {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const LanguageSettings(),
                       ),
                     ),
                   },

@@ -1,0 +1,135 @@
+{
+  "@@locale": "en",
+  "appName": "NekoSurf",
+  "@appName": {
+    "description": "The application name"
+  },
+  "add": "Add",
+  "@add": {
+    "description": "Add button label"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel button label"
+  },
+  "delete": "Delete",
+  "@delete": {
+    "description": "Delete button label"
+  },
+  "download": "Download",
+  "@download": {
+    "description": "Download button label"
+  },
+  "remove": "Remove",
+  "@remove": {
+    "description": "Remove button label"
+  },
+  "share": "Share",
+  "@share": {
+    "description": "Share button label"
+  },
+  "settingsThreads": "Threads",
+  "@settingsThreads": {
+    "description": "Settings menu item for threads"
+  },
+  "settingsPrivacy": "Privacy",
+  "@settingsPrivacy": {
+    "description": "Settings menu item for privacy"
+  },
+  "settingsData": "Data",
+  "@settingsData": {
+    "description": "Settings menu item for data"
+  },
+  "cacheSize": "Cache Size",
+  "@cacheSize": {
+    "description": "Label for cache size"
+  },
+  "deleteCache": "Delete Cache",
+  "@deleteCache": {
+    "description": "Button to delete cache"
+  },
+  "watchedMediaRetentionPeriod": "Watched Media Retention Period",
+  "@watchedMediaRetentionPeriod": {
+    "description": "Label for watched media retention period setting"
+  },
+  "selectRetentionPeriod": "Select retention period",
+  "@selectRetentionPeriod": {
+    "description": "Dialog title for selecting retention period"
+  },
+  "clearWatchedMediaHistory": "Clear Watched Media History",
+  "@clearWatchedMediaHistory": {
+    "description": "Button to clear watched media history"
+  },
+  "sortNewest": "Newest",
+  "@sortNewest": {
+    "description": "Sort option for newest first"
+  },
+  "sortOldest": "Oldest",
+  "@sortOldest": {
+    "description": "Sort option for oldest first"
+  },
+  "clearBookmarks": "Clear bookmarks",
+  "@clearBookmarks": {
+    "description": "Button to clear all bookmarks"
+  },
+  "removeBookmark": "Remove bookmark",
+  "@removeBookmark": {
+    "description": "Action to remove a bookmark"
+  },
+  "setBookmark": "Set bookmark",
+  "@setBookmark": {
+    "description": "Action to set a bookmark"
+  },
+  "deleteAttachmentTitle": "Delete Attachment?",
+  "@deleteAttachmentTitle": {
+    "description": "Dialog title for delete attachment confirmation"
+  },
+  "openInBrowser": "Open in Browser",
+  "@openInBrowser": {
+    "description": "Action to open in browser"
+  },
+  "openLink": "Open Link",
+  "@openLink": {
+    "description": "Action to open a link"
+  },
+  "replies": "Replies",
+  "@replies": {
+    "description": "Label for replies"
+  },
+  "permissionDeniedTitle": "Permission denied!",
+  "@permissionDeniedTitle": {
+    "description": "Title for permission denied dialog"
+  },
+  "permissionDeniedMessage": "To use this feature, you need to grant the app permission to access your storage.",
+  "@permissionDeniedMessage": {
+    "description": "Message explaining permission is needed"
+  },
+  "permissionDeniedInstruction": "Go to your device settings and enable the Full Access permission to the Photos for this app.",
+  "@permissionDeniedInstruction": {
+    "description": "Instructions on how to grant permission"
+  },
+  "openSystemSettings": "Open System Settings",
+  "@openSystemSettings": {
+    "description": "Button to open system settings"
+  },
+  "fileSaved": "File saved!",
+  "@fileSaved": {
+    "description": "Message when file is saved"
+  },
+  "fileDownloaded": "File downloaded!",
+  "@fileDownloaded": {
+    "description": "Message when file is downloaded"
+  },
+  "downloading": "Downloading...",
+  "@downloading": {
+    "description": "Message while downloading"
+  },
+  "fileConverting": "File converting...",
+  "@fileConverting": {
+    "description": "Message while converting file"
+  },
+  "downloadFailed": "Download failed :(",
+  "@downloadFailed": {
+    "description": "Message when download fails"
+  }
+}
