@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chan/Models/board.dart';
 import 'package:flutter_chan/blocs/favorite_model.dart';
+import 'package:flutter_chan/constants/app_strings.dart';
 import 'package:flutter_chan/pages/board/board_page.dart';
 import 'package:flutter_chan/services/string.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
