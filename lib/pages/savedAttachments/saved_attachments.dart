@@ -8,6 +8,7 @@ import 'package:flutter_chan/Models/post.dart';
 import 'package:flutter_chan/Models/saved_attachment.dart';
 import 'package:flutter_chan/blocs/saved_attachments_model.dart';
 import 'package:flutter_chan/blocs/theme.dart';
+import 'package:flutter_chan/constants/app_strings.dart';
 import 'package:flutter_chan/pages/media_page.dart';
 import 'package:flutter_chan/pages/savedAttachments/permission_denied.dart';
 import 'package:provider/provider.dart';
@@ -157,7 +158,7 @@ class _SavedAttachmentsState extends State<SavedAttachments> {
                               CupertinoActionSheet(
                             actions: [
                               CupertinoActionSheetAction(
-                                child: const Text('Clear bookmarks'),
+                                child: const Text(AppStrings.clearBookmarks),
                                 onPressed: () {
                                   savedAttachments
                                       .clearSavedAttachments(context);

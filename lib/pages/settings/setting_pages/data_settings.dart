@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chan/blocs/theme.dart';
 import 'package:flutter_chan/blocs/watched_media_model.dart';
+import 'package:flutter_chan/constants/app_strings.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -194,7 +195,7 @@ class DataSettingsState extends State<DataSettings> {
           CupertinoListSection.insetGrouped(
             children: [
               CupertinoListTile(
-                title: const Text('Cache Size'),
+                title: const Text(AppStrings.cacheSize),
                 trailing: Text(
                   '${_cacheSize.toStringAsFixed(2)} MB',
                   style: const TextStyle(
@@ -211,7 +212,7 @@ class DataSettingsState extends State<DataSettings> {
                 color: CupertinoColors.systemRed,
                 icon: CupertinoIcons.trash,
               ),
-              title: const Text('Delete Cache'),
+              title: const Text(AppStrings.deleteCache),
               trailing: const CupertinoListTileChevron(),
               onTap: () => deleteCache(),
             )
@@ -219,7 +220,7 @@ class DataSettingsState extends State<DataSettings> {
           CupertinoListSection.insetGrouped(
             children: [
               CupertinoListTile(
-                title: const Text('Watched Media Retention Period'),
+                title: const Text(AppStrings.watchedMediaRetentionPeriod),
                 subtitle: const Text(
                   'The number of days watched status of all media will be kept.',
                 ),
@@ -234,7 +235,7 @@ class DataSettingsState extends State<DataSettings> {
                       context: context,
                       builder: (context) {
                         return CupertinoActionSheet(
-                          title: const Text('Select retention period'),
+                          title: const Text(AppStrings.selectRetentionPeriod),
                           actions: [
                             for (final days in [3, 7, 14, 30])
                               CupertinoActionSheetAction(
@@ -246,7 +247,7 @@ class DataSettingsState extends State<DataSettings> {
                           ],
                           cancelButton: CupertinoActionSheetAction(
                             onPressed: () => Navigator.pop(context),
-                            child: const Text('Cancel'),
+                            child: const Text(AppStrings.cancel),
                           ),
                         );
                       },
@@ -264,7 +265,7 @@ class DataSettingsState extends State<DataSettings> {
                   color: CupertinoColors.systemRed,
                   icon: CupertinoIcons.eye_slash,
                 ),
-                title: const Text('Clear Watched Media History'),
+                title: const Text(AppStrings.clearWatchedMediaHistory),
                 trailing: const CupertinoListTileChevron(),
                 onTap: () async {
                   final watchedMediaProvider =

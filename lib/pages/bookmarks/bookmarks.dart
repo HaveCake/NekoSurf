@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_chan/Models/bookmark.dart';
 import 'package:flutter_chan/blocs/bookmarks_model.dart';
 import 'package:flutter_chan/blocs/theme.dart';
+import 'package:flutter_chan/constants/app_strings.dart';
 import 'package:flutter_chan/enums/enums.dart';
 import 'package:flutter_chan/pages/bookmarks/bookmarks_post.dart';
 import 'package:provider/provider.dart';
@@ -85,7 +86,7 @@ class _BookmarksState extends State<Bookmarks> {
                                 },
                               ),
                               CupertinoActionSheetAction(
-                                child: const Text('Oldest'),
+                                child: const Text(AppStrings.sortOldest),
                                 onPressed: () {
                                   bookmarks.setSort(Sort.byOldest);
                                   Navigator.pop(context);
@@ -114,7 +115,7 @@ class _BookmarksState extends State<Bookmarks> {
                                 CupertinoActionSheet(
                               actions: [
                                 CupertinoActionSheetAction(
-                                  child: const Text('Clear bookmarks'),
+                                  child: const Text(AppStrings.clearBookmarks),
                                   onPressed: () {
                                     bookmarks.clearBookmarks();
                                     Navigator.pop(context);

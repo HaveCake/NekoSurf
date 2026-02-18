@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">猫浪</string>
+    <string name="add">添加</string>
+    <string name="cache_size">缓存大小</string>
+    <string name="cancel">取消</string>
+    <string name="clear_bookmarks">清除书签</string>
+    <string name="clear_watched_media_history">清除已观看媒体历史</string>
+    <string name="delete">删除</string>
+    <string name="delete_attachment_title">删除附件？</string>
+    <string name="delete_cache">删除缓存</string>
+    <string name="download">下载</string>
+    <string name="download_failed">下载失败 :(</string>
+    <string name="downloading">下载中...</string>
+    <string name="file_converting">文件转换中...</string>
+    <string name="file_downloaded">文件已下载！</string>
+    <string name="file_saved">文件已保存！</string>
+    <string name="open_in_browser">在浏览器中打开</string>
+    <string name="open_link">打开链接</string>
+    <string name="open_system_settings">打开系统设置</string>
+    <string name="permission_denied_instruction">前往设备设置并为此应用启用照片的完全访问权限。</string>
+    <string name="permission_denied_message">要使用此功能，您需要授予应用访问存储的权限。</string>
+    <string name="permission_denied_title">权限被拒绝！</string>
+    <string name="remove">移除</string>
+    <string name="remove_bookmark">移除书签</string>
+    <string name="replies">回复</string>
+    <string name="select_retention_period">选择保留期限</string>
+    <string name="set_bookmark">设置书签</string>
+    <string name="settings_data">数据</string>
+    <string name="settings_privacy">隐私</string>
+    <string name="settings_threads">主题</string>
+    <string name="share">分享</string>
+    <string name="sort_newest">最新</string>
+    <string name="sort_oldest">最旧</string>
+    <string name="watched_media_retention_period">已观看媒体保留期限</string>
+</resources>

@@ -2,6 +2,7 @@ import 'package:app_settings/app_settings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chan/blocs/theme.dart';
+import 'package:flutter_chan/constants/app_strings.dart';
 import 'package:provider/provider.dart';
 
 class PermissionDenied extends StatelessWidget {
@@ -21,7 +22,7 @@ class PermissionDenied extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              'Permission denied!',
+              AppStrings.permissionDeniedTitle,
               style: TextStyle(
                 fontSize: 26,
                 color: theme.getTheme() == ThemeData.dark()
@@ -33,7 +34,7 @@ class PermissionDenied extends StatelessWidget {
               height: 30,
             ),
             Text(
-              'To use this feature, you need to grant the app permission to access your storage.',
+              AppStrings.permissionDeniedMessage,
               style: TextStyle(
                 fontSize: 16,
                 color: theme.getTheme() == ThemeData.dark()
@@ -45,7 +46,7 @@ class PermissionDenied extends StatelessWidget {
               height: 10,
             ),
             Text(
-              'Go to your device settings and enable the Full Access permission to the Photos for this app.',
+              AppStrings.permissionDeniedInstruction,
               style: TextStyle(
                 fontSize: 16,
                 color: theme.getTheme() == ThemeData.dark()
@@ -61,7 +62,7 @@ class PermissionDenied extends StatelessWidget {
                   ? Colors.white
                   : Colors.black,
               child: Text(
-                'Open System Settings',
+                AppStrings.openSystemSettings,
                 style: TextStyle(
                   color: theme.getTheme() == ThemeData.dark()
                       ? Colors.black

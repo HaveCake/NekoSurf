@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NekoSurf</string>
+    <string name="add">Add</string>
+    <string name="cache_size">Cache Size</string>
+    <string name="cancel">Cancel</string>
+    <string name="clear_bookmarks">Clear bookmarks</string>
+    <string name="clear_watched_media_history">Clear Watched Media History</string>
+    <string name="delete">Delete</string>
+    <string name="delete_attachment_title">Delete Attachment?</string>
+    <string name="delete_cache">Delete Cache</string>
+    <string name="download">Download</string>
+    <string name="download_failed">Download failed :(</string>
+    <string name="downloading">Downloading...</string>
+    <string name="file_converting">File converting...</string>
+    <string name="file_downloaded">File downloaded!</string>
+    <string name="file_saved">File saved!</string>
+    <string name="open_in_browser">Open in Browser</string>
+    <string name="open_link">Open Link</string>
+    <string name="open_system_settings">Open System Settings</string>
+    <string name="permission_denied_instruction">Go to your device settings and enable the Full Access permission to the Photos for this app.</string>
+    <string name="permission_denied_message">To use this feature, you need to grant the app permission to access your storage.</string>
+    <string name="permission_denied_title">Permission denied!</string>
+    <string name="remove">Remove</string>
+    <string name="remove_bookmark">Remove bookmark</string>
+    <string name="replies">Replies</string>
+    <string name="select_retention_period">Select retention period</string>
+    <string name="set_bookmark">Set bookmark</string>
+    <string name="settings_data">Data</string>
+    <string name="settings_privacy">Privacy</string>
+    <string name="settings_threads">Threads</string>
+    <string name="share">Share</string>
+    <string name="sort_newest">Newest</string>
+    <string name="sort_oldest">Oldest</string>
+    <string name="watched_media_retention_period">Watched Media Retention Period</string>
+</resources>

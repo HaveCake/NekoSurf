@@ -10,6 +10,7 @@ import 'package:flutter_chan/blocs/gallery_model.dart';
 import 'package:flutter_chan/blocs/saved_attachments_model.dart';
 import 'package:flutter_chan/blocs/theme.dart';
 import 'package:flutter_chan/blocs/watched_media_model.dart';
+import 'package:flutter_chan/constants/app_strings.dart';
 import 'package:flutter_chan/widgets/image_viewer.dart';
 import 'package:flutter_chan/widgets/webm_player.dart';
 import 'package:provider/provider.dart';
@@ -250,7 +251,7 @@ class _MediaPageState extends State<MediaPage> {
                             return StatefulBuilder(
                               builder: (context, setState) {
                                 return CupertinoAlertDialog(
-                                  title: const Text('Delete Attachment?'),
+                                  title: const Text(AppStrings.deleteAttachmentTitle),
                                   actions: [
                                     CupertinoDialogAction(
                                       child: const Text(
@@ -322,7 +323,7 @@ class _MediaPageState extends State<MediaPage> {
                                 },
                               ),
                               CupertinoActionSheetAction(
-                                child: const Text('Download'),
+                                child: const Text(AppStrings.download),
                                 onPressed: () {
                                   saveVideo(
                                     'https://i.4cdn.org/${widget.board}/${media[index].videoName}',
@@ -336,7 +337,7 @@ class _MediaPageState extends State<MediaPage> {
                               ),
                             ],
                             cancelButton: CupertinoActionSheetAction(
-                              child: const Text('Cancel'),
+                              child: const Text(AppStrings.cancel),
                               onPressed: () {
                                 Navigator.pop(context);
                               },
